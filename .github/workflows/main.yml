@@ -3,7 +3,7 @@ name: Application build with Maven, create and publish Docker image, verify resu
 on:
   push:
     branches:
-    - test
+    - main
 
 jobs:
   maven: 
@@ -55,3 +55,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Verify Docker image 
+      run: ./verify-image.sh
