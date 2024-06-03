@@ -3,7 +3,7 @@ name: Application build with Maven, create and publish Docker image, verify resu
 on:
   push:
     branches:
-    - main
+    - switching-action-version-to-@v4
 
 jobs:
   maven: 
