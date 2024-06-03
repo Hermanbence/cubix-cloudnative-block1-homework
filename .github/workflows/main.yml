@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build with Maven
-      run: ./mvnwpackage
+      run: ./mvnw package
 
     - name: Upload artifact for Docker job
       uses: actions/upload-artifact@v3
@@ -48,7 +48,7 @@ jobs:
 
   docker-verify :
     runs-on: ubuntu-latest
-    needs: maven
+    needs: docker
     permissions:
       contents: read
       packages: write
